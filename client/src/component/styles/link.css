@@ -8,8 +8,8 @@
   .second-color
   {
     width: 1528px;
-    height: 770px;
-    background-color: black;
+    height: 855px;
+    background-color: #0c1317;
   }
 
   
@@ -36,7 +36,7 @@
   }
   .container {
     position: absolute;
-    margin-top: -980px;
+    margin-top: -1070px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -51,9 +51,9 @@
   .main-box {
     background-color: white;
     width: 1140px;
-    height: 900px;
+    height: 995px;
     position: absolute;
-    margin-top: -900px;
+    margin-top: -995px;
     margin-left: 200px;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
@@ -119,24 +119,50 @@ img.qr-scaner {
     flex-direction: column;
     justify-content: space-between;
 }
-button.link-with-class {
+.link-with-class {
     background: white;
     border-style: none;
     font-size: larger;
     margin-left: 110px;
     margin-top: 30px;
     color: #18b988;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 img.imagege-for-web-app {
     width: 450px;
     margin-left: 340px;
     margin-top: 60px;
 }
-
-
-
-
+.div-for-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone-no_button{
+  margin-top: 20px;
+  margin-right: 120px;  
+}
+input.input-phone-number {
+  width: 250px;
+  height: 30px;
+  border-style: double;
+  border-radius: 2px;
+}
+.button-div-connect {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 35px;
+}
+.button-class{
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    border-style: none;
+    background: #18b988;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
 
 
 

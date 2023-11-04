@@ -1,1 +1,36 @@
+.moving-container {
+    background-color: #0c1317;
+    height: 729px;
+    margin-top: -22px;
+}
 
+h1.class-head-app {
+    text-align: center;
+}
+
+.class-head-app {
+    width: 100px;
+    padding: 265px;
+    margin-left: 465px;
+}
+/* Define the initial state of the hr element */
+.animate-hr {
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    margin: 0;
+    border: none;
+    animation: expand 2s ease-in-out forwards; /* Use the "expand" animation */
+    margin-top: -220px;
+    margin-left: 634px;
+  }
+  /* Define the "expand" animation */
+  @keyframes expand {
+    from {
+      width: 0; /* Start with 0 width */
+    }
+    to {
+      width: 300px; /* End with 100px width */
+    }
+  }
+  

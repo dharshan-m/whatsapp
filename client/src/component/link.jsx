@@ -3,8 +3,36 @@ import whatsapp  from './images/whatsapp image.png';
 import qrscanner from './images/qr_scan.png';
 import web from './images/whatsapp web.webp';
 import '../component/styles/link.css';
+import  { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
-function link(){
+function Link(){
+
+    const navigate = useNavigate();
+
+    const [tel, settel] = useState("");
+
+    const telphone = (e) => {
+        settel(e.target.value);
+    }
+
+    const phonenoChecker =(phoneno)=>{
+        return phoneno.length  <=10
+    }
+
+    const formSubmit=(e)=>{
+        e.preventDefault();
+        if(phonenoChecker(tel)){
+            alert("hello");
+            console.log(tel);
+            navigate('/home');
+        }
+        else{
+            alert("enter valid value");
+        }
+    }
+
+
     return(
         <div className='main-container-app'>
             <div className='first-color'></div>
@@ -50,8 +78,21 @@ function link(){
 
                         <hr className='hr-down'/>
 
-                        <div className='div-move-page'>
-                            <button className='link-with-class'>Link with phone number</button>
+                        <div className='next-page-format'>
+                            <form action="" className='form-container' onSubmit={formSubmit} >
+                                <div className='div-for-buttons'>
+                                    <div className='div-move-page'>
+                                        <p className='link-with-class'>Link with phone number</p>
+                                    </div> 
+                                    <div className='phone-no_button'>
+                                            <input type="tel" placeholder='+91' className='input-phone-number' pattern="[0-9]{10}" onChange={telphone} required/>
+                                    </div>
+                                </div>
+                                <div className='button-div-connect'>
+                                    <input type='submit' className='button-class' value={'Next'}/>
+                                </div>
+                            </form>
+
                         </div>
 
                         <div className='tutorial-div'>
@@ -63,4 +104,4 @@ function link(){
         </div>
     );
 }
-export default link;
+export default Link;
