@@ -1,0 +1,174 @@
+.community-img{
+    color: #817f7f;    
+}
+.profile-logo{
+    width:50px;
+    height: 50px;
+}
+
+.OuterBlock{
+    padding: 20px;
+    background-color: #0c1317;
+    height: 94.4vh;
+}
+
+.rowFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+.columnFlex{
+    display: flex;
+    flex-direction: column;
+}
+img.status-img {
+    width: 30px;
+}
+/* ------------------------------------------------------- */
+.div-for-nav-main.rowFlex {
+    background: #202c33;
+    width: 400px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 35px;
+}
+.other-updates-div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.status-img{
+    color: #817f7f; 
+}
+.channel-img{
+    color: #817f7f;
+}
+.group-img{
+    color: #817f7f;
+}
+.settings-img{
+    color: #817f7f;
+}
+input.class-input-search {
+    width: 390px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    margin-top: 10px;
+    margin-left: 26px;
+    background-color: #202c33;
+}
+input.class-input-search::placeholder{
+    padding: 20px;
+    color: #8696a0;
+}
+input.class-input-search + .class-input-search {
+    color: #8696a0; /* Set the color when input is present */
+}
+.class-main-div {
+    background-color: #111b21;
+    height: 610px;
+}
+.profile-1 {
+    display: flex;
+    /* align-items: center; */
+    cursor: pointer;
+    margin-top: 10px;
+    height: 80px;
+}
+.profile-1 {
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.profile-1:hover{
+    background: #202c33;
+}
+img.profile-for-secondary {
+    width: 60px;
+    padding: 10px;
+}
+p.name-of-person {
+    color: white;
+}
+p.description {
+    color: #8696a0;
+    margin-bottom: 25px;
+}
+.div-personal-details {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.div-details-as-name {
+    display: flex;
+    gap: 50px;
+}
+p.time-class {
+    color: #8696a0;
+}
+.div-time {
+    margin-left: 260px;
+    color: #8696a0;
+}
+.div-discription {
+    margin-top: -30px;
+}
+.profile-2 {
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.profile-2:hover{
+    background: #202c33;
+}
+.div-details-as-name-profile-2 {
+    display: flex;
+    gap: 160px;
+}
+.profile-3 {
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.profile-3:hover{
+    background: #202c33;
+}
+.div-details-as-name-profile-3 {
+    display: flex;
+    gap: 160px;
+}
+.profile-4 {
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.profile-4:hover{
+    background: #202c33;
+}
+.div-details-as-name-profile-4 {
+    display: flex;
+    gap: 148px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #00a884 ---- blueishhhhhh */
