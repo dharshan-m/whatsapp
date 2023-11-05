@@ -34,6 +34,7 @@ img.status-img {
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 35px;
+    border-right: 1px solid #273036;
 }
 .other-updates-div {
     display: flex;
@@ -72,6 +73,7 @@ input.class-input-search + .class-input-search {
 .class-main-div {
     background-color: #111b21;
     height: 610px;
+    border-right: 1px solid #273036;
 }
 .profile-1 {
     display: flex;
@@ -84,6 +86,8 @@ input.class-input-search + .class-input-search {
     display: flex;
     cursor: pointer;
     margin-top: 10px;
+    border-bottom: 1px solid #273036;
+    border-top: 1px solid #273036;
 }
 .profile-1:hover{
     background: #202c33;
@@ -121,7 +125,8 @@ p.time-class {
 .profile-2 {
     display: flex;
     cursor: pointer;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    border-bottom: 1px solid #273036;
 }
 .profile-2:hover{
     background: #202c33;
@@ -133,7 +138,8 @@ p.time-class {
 .profile-3 {
     display: flex;
     cursor: pointer;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    border-bottom: 1px solid #273036;
 }
 .profile-3:hover{
     background: #202c33;
@@ -145,7 +151,8 @@ p.time-class {
 .profile-4 {
     display: flex;
     cursor: pointer;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    border-bottom: 1px solid #273036;
 }
 .profile-4:hover{
     background: #202c33;
@@ -154,15 +161,75 @@ p.time-class {
     display: flex;
     gap: 148px;
 }
-
-
-
-
-
-
-
-
-
+/* -----------------------------message div------------------------ */
+.Message-div-container {
+    position: absolute;
+    margin-left: 446px;
+    margin-top: -670px;
+    border-right: 1px solid #273036;
+}
+.nav-div-inmessage {
+    background: #202c33;
+    width: 1050px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-and-name {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+.icons-settings {
+    gap: 60px;
+    display: flex;
+    padding: 35px;
+}
+svg.svg-inline--fa.fa-magnifying-glass.fa-lg.search-img {
+    color: #817f7f; 
+}
+p.name-of-person-in-group {
+    color: white;
+    /* margin-top: 35px; */
+}
+p.description-in-group {
+    margin-top: -12px;
+    color: #8696a0;
+}
+.plus-img{
+    color: #817f7f;
+}
+.mickrophone-img{
+    color: #817f7f;
+}
+.message-making-div {
+    margin-top: 555px;
+    background: #202c33;
+    height: 55px;
+}
+.nav-for-message-typing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 9px;
+    justify-content: space-between;
+}
+input.type-it-input-class {
+    width: 930px;
+    height: 35px;
+    /* background: #202c33; */
+    background-color: #2a3942;
+    border-style: none;
+    border-radius: 7px;
+    outline: none;
+}
+input.type-it-input-class::placeholder{
+    padding: 20px;
+    color: #8696a0;
+}
 
 
 

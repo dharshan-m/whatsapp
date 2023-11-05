@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Link from './component/link';
 import Home from './component/home';
+import Profile from './component/profile';
 import reportWebVitals from './reportWebVitals';
 import {Route, Routes, BrowserRouter,} from 'react-router-dom';
 
@@ -14,6 +15,7 @@ root.render(
       <Route path="/" Component={App}/>
       <Route path="/link" element={<Link />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   </BrowserRouter>
 );
