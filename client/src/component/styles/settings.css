@@ -1,0 +1,15 @@
+.main-div-settings {
+    background: #202c33;
+    width: 170px;
+    height: 230px;
+}
+
+#para{
+    color: #d1d7db;
+    cursor: pointer;
+    height: 25px;
+    text-align: center;
+}
+#para:hover{
+    background-color: #111b21;
+}

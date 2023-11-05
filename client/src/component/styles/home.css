@@ -1,9 +1,11 @@
 .community-img{
     color: #817f7f;    
+    cursor: pointer;
 }
 .profile-logo{
     width:50px;
     height: 50px;
+    cursor: pointer;
 }
 
 .OuterBlock{
@@ -43,15 +45,19 @@ img.status-img {
 }
 .status-img{
     color: #817f7f; 
+    cursor: pointer;
 }
 .channel-img{
     color: #817f7f;
+    cursor: pointer;
 }
 .group-img{
     color: #817f7f;
+    cursor: pointer;
 }
 .settings-img{
     color: #817f7f;
+    cursor: pointer;
 }
 input.class-input-search {
     width: 390px;

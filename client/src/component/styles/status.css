@@ -1,0 +1,31 @@
+.class-status-provide{
+    width: 445px;
+    height: 670px;
+    background-color: #111b21;
+}
+.nav-div-for-status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #202c33;
+    padding: 30px;
+}
+.profile-2-status{
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.div-for-encyruption {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+p.content-encryption {
+    color: #8696a0;
+}
+.tag-encryption-inside{
+    color: #1ab6a0;
+}
+.status-img{
+    cursor: pointer;
+}

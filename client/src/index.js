@@ -5,6 +5,11 @@ import App from './App';
 import Link from './component/link';
 import Home from './component/home';
 import Profile from './component/profile';
+import Community from './component/community';
+import Status from './component/status';
+import Channel from './component/channel';
+import Group from './component/group';
+import Settings from './component/settings';
 import reportWebVitals from './reportWebVitals';
 import {Route, Routes, BrowserRouter,} from 'react-router-dom';
 
@@ -16,6 +21,11 @@ root.render(
       <Route path="/link" element={<Link />} />
       <Route path="/home" element={<Home />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/community" element={<Community />} />
+      <Route path="/status" element={<Status />} />
+      <Route path="/channel" element={<Channel />} />
+      <Route path="/group" element={<Group />} />
+      <Route path="/settings" element={<Settings />} />
     </Routes>
   </BrowserRouter>
 );

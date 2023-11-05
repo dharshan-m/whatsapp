@@ -14,9 +14,15 @@ import{
     faMicrophone as mickrophone,
 } from "@fortawesome/free-solid-svg-icons"
 
+import Profile from './profile';
+import Community from './community';
+import Status from './status';
+import Channel from './channel';
+import Group from './group';
+import Settings from './settings';
 
 function Home() {
-    // const [isMessageVisible, setMessageVisible] = useState(false);
+    const [pagestate, setPagestate] = useState(1);
   
     // const toggleMEssage = ()=>{
     //     console.log("toggle MEssage");
@@ -25,12 +31,51 @@ function Home() {
         console.log('Button clicked in ParentComponent');
       }
     
+      const handleValueChange = (newValue) => {
+        setPagestate(newValue);
+      }
+
     return (
         <>
             <div className='OuterBlock rowFlex'>
                 <div>
-                    <Nav/>
-                    <Second onClick={handleButtonClick}/>
+                    {pagestate===1?
+                        <>
+                            <Nav onValueChange={handleValueChange}/>
+                            <Second onClick={handleButtonClick}/>
+                        </>
+                        :
+                        pagestate===2?
+                        <>
+                            <Profile onValueChange={handleValueChange}/>
+                        </>
+                        :
+                        pagestate===3?
+                        <>
+                            <Community onValueChange={handleValueChange}/>
+                        </>
+                        :
+                        pagestate===4?
+                        <>
+                            <Status onValueChange={handleValueChange}/>
+                        </>
+                        :
+                        pagestate===5?
+                        <>
+                            <Channel onValueChange={handleValueChange}/>
+                        </>
+                        :
+                        pagestate===6?
+                        <>
+                            <Group onValueChange={handleValueChange}/>
+                        </>:
+                        <>
+                            <Settings onValueChange={handleValueChange}/>
+                        </>
+                    }
+                    
+
+
                     <Message/>
                 </div>
             </div>
@@ -42,21 +87,48 @@ function Home() {
 
 
 
-const Nav = ()=>{
+const Nav = ({onValueChange})=>{
     
-    
+    const handleValueChange = (newValue) => {
+    // setSharedValue(newValue);
+  }
+
+  const profileClick =()=>{
+    onValueChange(2);
+  }
+
+  const communityClick =()=>{
+    onValueChange(3);
+  }
+
+  const statusClick=()=>{
+    onValueChange(4);
+  }
+
+    const channelClick=()=>{
+        onValueChange(5);
+    }
+    const groupClick=()=>{
+        onValueChange(6);
+    }
+    const settingsClick=()=>{
+        onValueChange(7);
+    }
+    // const settings2=()=>{
+    //     onValueChange(1);
+    // }
 
     return (
         <div className='div-for-nav-main rowFlex'>
             <div className='profile-div'>
-                <img src={profile} alt="profile logo" className='profile-logo'/>
+                <img src={profile} alt="profile logo" className='profile-logo' onClick={profileClick}/>
             </div>
             <div className='other-updates-div'>
-                <FontAwesomeIcon icon={community} className='community-img' size='lg' />
-                <FontAwesomeIcon icon={status} className='status-img' size='lg'/>
-                <FontAwesomeIcon icon={channel} className='channel-img' size='lg'/>
-                <FontAwesomeIcon icon={group} className='group-img' size='lg'/>
-                <FontAwesomeIcon icon={settings} className='settings-img' size='lg'/>
+                <FontAwesomeIcon icon={community} className='community-img' size='lg' onClick={communityClick}/>
+                <FontAwesomeIcon icon={status} className='status-img' size='lg' onClick={statusClick}/>
+                <FontAwesomeIcon icon={channel} className='channel-img' size='lg' onClick={channelClick}/>
+                <FontAwesomeIcon icon={group} className='group-img' size='lg' onClick={groupClick}/>
+                <FontAwesomeIcon icon={settings} className='settings-img' size='lg' onClick={settingsClick} />
             </div>
         </div>
     )

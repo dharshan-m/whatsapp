@@ -1,0 +1,48 @@
+.gorup-main-div{
+    width: 445px;
+    height: 670px;
+    background-color: #111b21;
+}
+
+.nav-roup-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #202c33;
+    padding: 30px;
+}
+.class-new-group{
+    color: white;
+}
+.creating-groups {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 1px solid #273036;
+    margin-top: 11px;
+    cursor: pointer;
+    height: 65px;
+}
+.creating-groups:hover{
+    background: #202c33;
+}
+.creating-channels-ongroup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #273036;
+    gap: 50px;
+    height: 65px;
+}
+.creating-channels-ongroup:hover{
+    background: #202c33;
+}
+p.para-for-contants {
+    text-align: center;
+    color: #1ab6a0;
+    height: 47px;
+    border-bottom: 1px solid #273036;
+    margin-top: 20px;
+}
