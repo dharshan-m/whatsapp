@@ -73,6 +73,9 @@ input.class-input-search::placeholder{
     padding: 20px;
     color: #8696a0;
 }
+input.class-input-search:focus{
+    color: white;
+}
 input.class-input-search + .class-input-search {
     color: #8696a0; /* Set the color when input is present */
 }
@@ -231,10 +234,14 @@ input.type-it-input-class {
     border-style: none;
     border-radius: 7px;
     outline: none;
+    transition: padding 0.3s;
 }
 input.type-it-input-class::placeholder{
     padding: 20px;
     color: #8696a0;
+}
+input.type-it-input-class:focus{
+    color: white;
 }
 
 

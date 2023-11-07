@@ -68,10 +68,13 @@ function Home() {
                         pagestate===6?
                         <>
                             <Group onValueChange={handleValueChange}/>
-                        </>:
+                        </>
+                        :
+                        pagestate===7?
                         <>
                             <Settings onValueChange={handleValueChange}/>
-                        </>
+                        </>:
+                        <></>
                     }
                     
 
@@ -145,7 +148,7 @@ const Second =(props)=>{
     return(
         <div className='class-main-div'>
             <div className='search-div'>
-                <input type="search" placeholder='Search or start new chat' className='class-input-search'/>
+                <input type="search" placeholder='Search or start new chat' className='class-input-search' />
             </div>
             <div className='div-friend-chats'>
                 {/* <div className='profile-1' onClick={ToggleMessage}>

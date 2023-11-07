@@ -10,6 +10,8 @@ import Status from './component/status';
 import Channel from './component/channel';
 import Group from './component/group';
 import Settings from './component/settings';
+import Settings2msg from './component/settings2msg';
+import Searchmsg from './component/searchmsg';
 import reportWebVitals from './reportWebVitals';
 import {Route, Routes, BrowserRouter,} from 'react-router-dom';
 
@@ -26,6 +28,8 @@ root.render(
       <Route path="/channel" element={<Channel />} />
       <Route path="/group" element={<Group />} />
       <Route path="/settings" element={<Settings />} />
+      <Route path="settings2msg" element={<Settings2msg/>}/>
+      <Route path="searchmsg" element={<Searchmsg/>}/>
     </Routes>
   </BrowserRouter>
 );
