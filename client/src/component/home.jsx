@@ -1,5 +1,5 @@
 import './styles/home.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import profile from './images/profile-logo.png';
 // import status from './images/status.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,7 @@ import{
     faMagnifyingGlass as search,
     faPlus as plus,
     faMicrophone as mickrophone,
+    faShare as sendbtn,
 } from "@fortawesome/free-solid-svg-icons"
 
 import Profile from './profile';
@@ -220,6 +221,45 @@ const Second =(props)=>{
 
 
 const Message =()=>{
+
+    const [messages, setMessages] = useState([]); // State for storing messages
+    const [inputText, setInputText] = useState('');
+
+    useEffect(() => {
+        const storedMessages = JSON.parse(localStorage.getItem('chatMessages'));
+        if (storedMessages) {
+            setMessages(storedMessages);
+        }
+    }, []);
+    
+      // Update local storage whenever messages change
+    useEffect(() => {
+        localStorage.setItem('chatMessages', JSON.stringify(messages));
+    }, [messages]);
+
+    const handleInputChange = (e) => {
+        setInputText(e.target.value);
+    };
+
+    const handleSendMessage = () => {
+        if (inputText.trim() !== '') {
+          // Create a new message object
+            const newMessage = {
+            text: inputText, // Message text
+            sender: 'user', // Sender (e.g., 'user' or 'bot')
+        };
+    
+          // Add the new message to the messages state
+            setMessages([...messages, newMessage]);
+          // Reset the input text to an empty string after sending
+            setInputText('');
+        }
+    };
+
+    const handleDeleteMessage = (id) => {
+        const updatedMessages = messages.filter((message) => message.id !== id);
+        setMessages(updatedMessages);
+    };
     
     return(
         <>
@@ -238,10 +278,23 @@ const Message =()=>{
                     </div>
                 </div>
 
+                <div className="chat-container">
+                    {messages.map((message, index) => (
+                     // Display each message in a div, using its index as the key
+                        <div key={index} className={`message ${message.sender}`}>
+                            {/* {message.text} Show the message text */}
+                            <span onClick={() => handleDeleteMessage(message.id)} className='span-message-derrived'>{message.text}</span>
+                            {/* <button onClick={() => handleDeleteMessage(message.id)}>Delete</button> */}
+                        </div>
+                    ))}
+                </div>
+
                 <div className='message-making-div'>
                     <div className='nav-for-message-typing'>
                         <FontAwesomeIcon icon={plus} className='plus-img' size='lg'/>
-                        <input type="text" placeholder='Type a message' className='type-it-input-class'/>
+                        <input type="text" placeholder='Type a message' className='type-it-input-class' value={inputText} onChange={handleInputChange}/>
+                        {/* <button onClick={handleSendMessage} className='button-send-msg'>Send</button> */}
+                        <FontAwesomeIcon icon={sendbtn} className='sendbtn-img' size='lg' onClick={handleSendMessage}/>
                         <FontAwesomeIcon icon={mickrophone} className='mickrophone-img' size='lg'/>
                     </div>
                 </div>

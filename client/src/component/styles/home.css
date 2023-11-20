@@ -215,9 +215,10 @@ p.description-in-group {
     color: #817f7f;
 }
 .message-making-div {
-    margin-top: 555px;
+    margin-top: 1px;
     background: #202c33;
     height: 55px;
+    /* position: fixed; */
 }
 .nav-for-message-typing {
     display: flex;
@@ -235,6 +236,7 @@ input.type-it-input-class {
     border-radius: 7px;
     outline: none;
     transition: padding 0.3s;
+    padding-left: 10px;
 }
 input.type-it-input-class::placeholder{
     padding: 20px;
@@ -243,8 +245,28 @@ input.type-it-input-class::placeholder{
 input.type-it-input-class:focus{
     color: white;
 }
-
-
+.message.user {
+    color: white;
+}
+.chat-container {
+    background: #0b141a;
+    height: 554px;
+    overflow: auto;
+}
+.sendbtn-img{
+    cursor: pointer;
+    color: #817f7f;
+}
+.message.user {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 80px;
+}
+.span-message-derrived{
+    cursor: pointer;
+}
 
 
 
